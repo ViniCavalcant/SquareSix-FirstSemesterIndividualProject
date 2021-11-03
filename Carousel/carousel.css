@@ -1,0 +1,293 @@
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    vertical-align: middle;
+}
+
+/* hearder */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search img{
+    width: 12px;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 100;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation li {
+    list-style: none;
+    margin: 0 10px;
+}       
+
+.navigation li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.navigation li:hover a {
+    color: #DE6011;
+}
+
+.icon-heart {
+    color: #fff;
+}
+
+.search {
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.search input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    border-radius: 4px;
+    padding: 0 10px 0 10px;
+    backdrop-filter: blur(10px);
+}
+
+.search input::placeholder {
+    color: #fff;
+}
+
+
+.search .search_icon img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    padding-right: 50px;
+    color: #fff;
+    border-radius: 1px solid #fff;
+}
+
+.search_icon {
+    width: 12px;
+    right: 12px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides img {
+    width: 100vh;
+    height: 100vh;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* Banner */
+
+/* Estilização do content */
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.buttons .play_button img,
+.buttons .pause_button img {
+    height: 12px;
+}
+
+.banner .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content{
+    position: relative;
+    z-index: 1;
+    max-width: 550px
+}
+
+.content .movieTitle{
+    max-width: 250px;
+    max-height: 155px;
+    padding-bottom: 10px;
+}
+
+.fade .banner .content h4{
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+}
+
+.fade .banner .content h4 span{
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    
+}
+
+.fade .banner .content h4 span:first-child{
+    padding-left: 0;
+}
+
+.fade .banner .content h4 span:last-child{
+    border-right: none;
+}
+
+.mySlides .banner .content h4 span i{
+    background: #DE0611;
+    padding: 4px 8px;
+    display: inline-block;
+    font-style: normal;
+    border-radius: 2px;
+    font-weight: 500px;
+    text-decoration: none;
+}
+
+.mySlides .banner .content p {
+    font-size: 18px;
+    font-weight: 300px;
+    line-height: 24px;
+    margin: 10px 0 20px;
+    color: #fff;
+}
+
+.mySlides .banner .content .buttons{
+    position: relative;
+    align-items: center;
+}
+
+.mySlides .banner .content .buttons a{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: #DE0611;
+    color: #fff;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.mySlides .banner .content .buttons a:nth-child(2){
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mySlides .banner .content .buttons a:hover:nth-child(2){
+    background: #DE0611;
+    transition: 0.5s;
+}
+
+.banner .content .buttons .img_play_button,
+.banner .content .buttons .img_pause_button{
+    width: 12px;
+}
+
+
+/* Media Query */
+@media (max-width: 991px) {
+    header {
+        padding: 20px 50px;
+        flex-direction: column;
+    }
+
+    .banner {
+        padding: 100px 50px;
+    }
+
+    .banner .play{
+        left: 4%;
+        font-size: 16px;
+        max-width: 550px
+    }
+
+    .play img {
+        margin-right: 10px;
+        max-width: 40px
+    }
+
+    .trailer .video_player {
+        max-width: 90%;
+    }
+}
