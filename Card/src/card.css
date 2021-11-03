@@ -1,0 +1,49 @@
+:root{
+    --clr-neutral-900: #12171B;
+    --clr-neutral-100: #ffff;
+    --clr-accent-400: #42F583;
+}
+
+.cards::before,
+.cards::after{
+    box-sizing: border-box;
+}
+
+.cards{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    line-height: 1.6;
+    background: var(--clr-neutral-900);
+    font-family: sans-serif;
+}
+
+.cards .card{
+    color: var(--clr-neutral-100);
+    background-image: url(../assets/big-poster-filme-mulan-2020-disney-lo002-tamanho-90x60-cm-decoracao-geek.jpg);
+    background-size: cover;
+    padding: 160px 0 0;
+    max-width: 35ch;
+}
+
+.card .card_content{
+    padding: 24px;
+    background: linear-gradient(
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 0.3) 20%,
+    hsl(0 0% 0% / 1)
+    );
+}
+
+.card .card_title h2{
+    position: absolute;
+    outline: 1px solid red;
+}
+
+.card_title::after h2{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: var(--clr-accent-400);
+}
