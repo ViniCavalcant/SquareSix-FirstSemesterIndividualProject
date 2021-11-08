@@ -293,10 +293,82 @@ form .signup a {
   left: 100%;
 }
 
-section .container .imgBx {
-  display: none;
+
+/* ticket */
+
+.section_login_ticket{
+  display: flex;
+  justify-content: space-around;
 }
 
-section .container .imgBx {
-  display: none;
+.card_ticket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo_ticket {
+	position: absolute;
+	border-bottom: solid;
+	font-size: 20px;
+	text-align: center;
+	width: 70%;
+	left: 50px;
+  top: 5px;
+}
+
+.cinima_ticket {
+	position: absolute;
+	font-size: 26px;
+	top: 50px;
+	text-align: center;
+	left: 100px;
+}
+
+.frase_ticket {
+	position: absolute;
+	border-top: solid;
+	font-size: 12px;
+	text-align: center;
+	width: 70%;
+	top: 93px;
+	left: 50px;
+	padding-top: 10px;
+}
+
+/* Numbers */
+.numero_ticket {
+	position: absolute;
+	text-align: center;
+	border-bottom: solid;
+	font-size: 20px;
+	width: 15%;
+	top: 50px;
+}
+
+.esquerda_ticket {
+	left: -10px;
+	transform: rotate(270deg);
+  width: 60px;
+}
+
+.direita_ticket {
+	right: -15px;
+	transform: rotate(90deg);
+  width: 60px;
+}
+
+/* Corners */
+
+.inverted-corner {
+	box-sizing: border-box;
+	position: relative;
+	background-color: rgb(205, 34, 35);
+	width: 300px;
+	height: 130px;
+	border: solid;
+	border-left: 0px;
+	border-right: 0px;
+	border-color: var(--color-background-primary);
+  transform: rotate(-30deg);
 }
