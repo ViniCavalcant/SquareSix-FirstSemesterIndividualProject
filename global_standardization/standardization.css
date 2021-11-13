@@ -12,5 +12,6 @@
   --color-background-secundary: #130C40;
 
   /* Fonts */
-  --font-lato-regular: https://fonts.googleapis.com/css2?family=Lato:wght@300;
+  --font-family-lato: 'Lato', sans-serif;
+  --font-family-oswald: 'Oswald', sans-serif;
 }

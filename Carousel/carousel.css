@@ -8,7 +8,9 @@
     vertical-align: middle;
 }
 
-/* hearder */
+body{
+    font-family: var(--font-family-lato);
+}
 
 * {
     margin: 0;
@@ -124,7 +126,7 @@
 }
 
 .mySlides .banner .content h4 span i{
-    background: var(--color-text-darker);
+    background: var(--color-text-dark);
     padding: 4px 8px;
     display: inline-block;
     font-style: normal;
