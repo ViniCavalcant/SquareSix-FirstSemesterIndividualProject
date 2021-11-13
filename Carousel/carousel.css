@@ -99,8 +99,8 @@
 }
 
 .content .movieTitle{
-    max-width: 250px;
-    max-height: 155px;
+    max-width: 190px;
+    max-height: 100px;
     padding-bottom: 10px;
 }
 
@@ -124,7 +124,7 @@
 }
 
 .mySlides .banner .content h4 span i{
-    background: #DE0611;
+    background: var(--color-text-darker);
     padding: 4px 8px;
     display: inline-block;
     font-style: normal;
@@ -138,7 +138,7 @@
     font-weight: 300px;
     line-height: 24px;
     margin: 10px 0 20px;
-    color: #fff;
+    color: var(--color-text-white);
 }
 
 .mySlides .banner .content .buttons{
@@ -150,8 +150,8 @@
     position: relative;
     display: inline-block;
     margin-right: 10px;
-    background: #DE0611;
-    color: #fff;
+    background: var(--color-text-darker);
+    color: var(--color-text-white);
     padding: 6px 20px;
     text-decoration: none;
     font-weight: 500;
@@ -165,12 +165,12 @@
 }
 
 .mySlides .banner .content .buttons a:hover:nth-child(2){
-    background: #DE0611;
+    background: var(--color-text-darker);
     transition: 0.5s;
 }
 
-.banner .content .buttons .img_play_button,
-.banner .content .buttons .img_pause_button{
+.content .buttons .img_play_button,
+.content .buttons .img_pause_button{
     width: 12px;
 }
 
