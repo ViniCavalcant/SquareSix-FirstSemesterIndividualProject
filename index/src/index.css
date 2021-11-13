@@ -28,10 +28,6 @@ a {
 
 /*BARRA DE MENU*/
 
-header {
-  position: absolute;
-  z-index: 40;
-}
 
 .header_menu {
   width: 100%;
