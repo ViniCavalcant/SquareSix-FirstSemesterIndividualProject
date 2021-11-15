@@ -1,0 +1,268 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.showcase{
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-white);
+  z-index: 2;
+}
+
+.showcase header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.showcase header{
+  position: fixed;
+}
+
+.logo_square_six{
+  display: flex;
+}
+
+.logo{
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.sing{
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.sing .sing_up a{
+  color: var(--color-text-white);
+  text-decoration: none;
+  transition: .5s;
+}
+
+.sing .sing_up a:hover{
+  color: var(--color-text-light);
+}
+
+.sing .sing_in a{
+  color: var(--color-text-light);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 80px;
+  height: 28px;
+  background-color: var(--color-text-white);
+  transition: .5s;
+  border-radius: 3px;
+}
+
+.sing .sing_in a:hover{
+  color: var(--color-text-white);
+  background-color: var(--color-text-light);
+}
+
+.logo_square_six h2.division{
+  display: flex;
+  margin-left: 6px;
+  margin-right: 6px;
+  width: 1px;
+  height: 24px;
+  background-color: var(--color-text-white);
+}
+
+.sing_division{
+  display: flex;
+  margin-left: 16px;
+  margin-right: 16px;
+  width: 1px;
+  height: 24px;
+  background-color: var(--color-text-white);
+}
+
+.showcase video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+
+.text{
+  position: relative;
+  z-index: 10;
+}
+
+.text h3{
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  width: 600px;
+}
+
+.text p{
+  font-size: 28px;
+  margin: 20px 0;
+  font-weight: 500;
+  max-width: 700px;
+}
+
+.text a{
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  
+  background-color: var(--color-text-darker);
+  color: var(--color-text-white);
+  padding: 10px 30px;
+  text-decoration: none;
+  
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 1s;
+  border-radius: 3px;
+}
+
+.text a:hover{
+  background-color: var(--color-text-white);
+  color: var(--color-text-darker);
+}
+
+
+
+/* NEW SECTION */
+
+
+img{
+  width: 62px;
+  padding: 18px 0 4px 0;
+  display: flex;
+  margin-left: 40%;
+}
+
+section{
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-background-primary);
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.section-features { 
+  padding: 80px 10%;
+}
+
+.section-features-title h2 {
+  text-align: center;
+  color: var(--color-text-white);
+  font-size: 160%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  word-spacing: -2px;
+  margin: 0px 0;
+}
+
+.section-features-title h2:after {
+  content: " ";
+  display: block;
+  height: 2px;
+  background-color: var(--color-text-darker);
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.section-features-title p {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--color-text-white);
+  font-size: 100%;
+  font-weight: 300;
+  letter-spacing: 1px;
+  word-spacing: 2px; 
+}
+
+
+.box .big-icon {
+  font-size: 300%;
+  display: block;
+  color: var(--color-text-white);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.box h3 {
+  text-align: center;
+  color: var(--color-text-white);
+  font-size: 140%;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.box p {
+  padding: 0 40px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 80%;
+  font-weight: 200;
+  line-height: 145%;
+  word-spacing: 1px;
+  color: var(--color-text-white);
+}
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child{ 
+  margin-left: 0; 
+}
+
+.span_1_of_3 {
+	width: 32.2%;
+}
+
+/* END NEW SECTION */

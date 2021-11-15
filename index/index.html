@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./src/index.css">
-  <link rel="stylesheet" href="./src/index.js">
+  <link rel="stylesheet" href="../index/src/style.css">
+  <link rel="stylesheet" href="../video_background/src/video.js">
   <link rel="stylesheet" href="../global_standardization/pattern.css">
   <link rel="stylesheet" href="../global_standardization/normalize.css">
   <link rel="stylesheet" href="../global_standardization/standardization.css">
@@ -20,10 +20,9 @@
       <div class="header_menu">
         <div class="header_container">
           <div class="header_logo">
-            <a href="../video_background/assets/video/The Beauty Of Interstellar.mp4">
+            <a href="./index.html">
               <h1>Square | Six</h1>
             </a>
-            <img src="" alt="">
           </div>
 
           <nav class="link_hover nav">
@@ -38,7 +37,7 @@
   </header>
 
   <section class="showcase">
-    <video src="../video_background/assets/video/The Beauty Of Interstellar.mp4" muted loop autoplay>
+    <video src="./assets/video/The Beauty Of Interstellar.mp4" muted loop autoplay>
     </video>
 
     <div class="overlay"></div>
@@ -54,59 +53,40 @@
   </section>
 
 
-  <section class="section">
-
-    <div class="card_ticket">
-      <div class="inverted-corner">
-        <div class="content_ticket">
-          <div class="logo_ticket">SQUARE SIX</div>
-          <div class="cinima_ticket">CINEMA</div>
-          <div class="numero_ticket esquerda_ticket">270620</div>
-          <div class="numero_ticket direita_ticket">270620</div>
-          <div class="frase_ticket">
-            QUE A FORÇA ESTEJA COM VOCÊ
-          </div>
-        </div>
-      </div>
+  <section class="section-features" id="expertise">
+    <div class="section-features-title">
+      <h2>Minha vida</h2>
+      <p>Quando for mudar o mundo, não peça permissão.</p>
     </div>
 
-    <div id="login_container" class="container">
-      <div class="user signinBx">
-        <div class="formBx">
-          <form action="" onsubmit="return false;">
-            <h2>Entrar</h2>
-            <input type="text" name="" placeholder="Nome" />
-            <input type="password" name="" placeholder="Senha" />
-            <input type="submit" name="" value="Entrar" />
-            <p class="signup">
-              Ainda não tem uma conta ?
-              <a href="#login_container" onclick="toggleForm();">Registrar - se</a>
-            </p>
-          </form>
-        </div>
+    <div class="section group">
+
+      <div class="col span_1_of_3 box">
+        <i class="ion-android-bulb big-icon"></i>
+        <h3>Razão</h3>
+        <img src="./assets/images/clapperboard.png" alt="">
+        <p>Você me salvou de todas as maneiras que alguém pode ser salvo.</p>
+        <p> - Titanic.</p>
       </div>
 
-      <div class="user signupBx">
-        <div class="formBx">
-          <form action="" onsubmit="return false;">
-            <h2>Crie uma Conta</h2>
-            <input type="text" name="" placeholder="Nome" />
-            <input type="email" name="" placeholder="Email" />
-            <input type="password" name="" placeholder="Criar uma senha" />
-            <input type="password" name="" placeholder="Confirmar senha" />
-            <input type="submit" name="" value="Registrar" />
-            <p class="signup">
-              Já possui uma conta ?
-              <a href="#login_container" onclick="toggleForm();">Entrar</a>
-            </p>
-          </form>
-        </div>
+      <div class="col span_1_of_3  box">
+        <i class="ion-android-desktop big-icon"></i>
+        <h3>Paixão</h3>
+        <img src="./assets/images/cinema.png" alt="">
+        <p>A vida passa muito rápido. E se você não curtir de vez em quando, a vida passa e você nem vê.</p>
+        <p>- Curtindo a vida adoidado.</p>
       </div>
+
+      <div class="col span_1_of_3 box">
+        <i class="ion-social-html5-outline big-icon"></i>
+        <h3>Imaginação</h3>
+        <img src="./assets/images/director.png" alt="">
+        <p>Tudo que temos de decidir é o que fazer com o tempo que nos é dado.</p>
+        <p>- O Senhor dos Anéis.</p>
+      </div>
+
     </div>
   </section>
-
-
-  <script src="../index/src/index.js"></script>
 </body>
 
 </html>
