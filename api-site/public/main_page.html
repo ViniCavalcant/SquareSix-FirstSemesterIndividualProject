@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Square|Six - Home</title>
     <link rel="stylesheet" href="./css/mainPage.css">
     <link rel="stylesheet" href="./css/quiz.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/pattern.css">
     <link rel="stylesheet" href="./css/standardization.css">
+    <link rel="shortcut icon" type="imagex/png" href="./assets/shakespeare.ico">
 </head>
 
-<body>
+<body onload="validarSessao(), atualizarFeed()">
 
     <header>
         <div>
@@ -27,12 +28,12 @@
 
                     <nav class="link_hover nav">
                         <ul>
-                            <li><a href="#">Início</a></li>
+                            <li><a href="./main_page.html">Início</a></li>
                             <li><a href="#">Filmes</a></li>
                             <li><a href="#">Séries</a></li>
                             <li><a href="#">Em alta</a></li>
                             <li><a href="">|</a></li>
-                            <li><a href="#">Sair</a></li>
+                            <li><a onclick="limparSessao()" href="./index.html">Sair</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -49,20 +50,17 @@
                     <h1>Blade Runner</h1>
                     <h4>
                         <span>2020</span>
-                        <span><i>12+</i></span>
+                        <span><i>14+</i></span>
                         <span>1h 55min</span>
                         <span>Action</span>
                     </h4>
                     <p class="film_description">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum deleniti corrupti rerum
-                        hic! Corrupti culpa sunt voluptates neque, minima porro velit maiores necessitatibus deserunt
-                        doloremque. Animi veniam voluptatem accusantium quod?
+                        Após descobrir um segredo que ameaça o que resta da sociedade, um novo policial parte em busca
+                        de Rick Deckard, que está desaparecido há 30 anos.
                     </p>
                     <div class="buttons">
                         <a class="play_button" href="#"><img class="img_play_button"
                                 src="./assets/images/botao-play.png" area-hidden="true"> Assistir</a>
-                        <a class="pause_button" href="#"><img class="img_pause_button" src="./assets/icon/search.png"
-                                area-hidden="true"> Curtir</a>
                     </div>
                 </div>
             </div>
@@ -76,20 +74,18 @@
                     <h1>A Chegada</h1>
                     <h4>
                         <span>2020</span>
-                        <span><i>12+</i></span>
+                        <span><i>10+</i></span>
                         <span>1h 55min</span>
                         <span>Action</span>
                     </h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum deleniti corrupti rerum
-                        hic! Corrupti culpa sunt voluptates neque, minima porro velit maiores necessitatibus deserunt
-                        doloremque. Animi veniam voluptatem accusantium quod?
+                        Naves alienígenas chegaram às principais cidades do mundo. Com a intenção de se comunicar com os
+                        visitantes, uma linguista e um militar são chamados para decifrar as estranhas mensagens dos
+                        visitantes.
                     </p>
                     <div class="buttons">
                         <a class="play_button" href="#"><img class="img_play_button"
                                 src="./assets/images/botao-play.png" area-hidden="true"> Play</a>
-                        <a class="pause_button" href="#"><img class="img_pause_button" src="./assets/icon/search.png"
-                                area-hidden="true"> My List</a>
                     </div>
                 </div>
             </div>
@@ -103,26 +99,25 @@
                     <h1>Interstellar</h1>
                     <h4>
                         <span>2020</span>
-                        <span><i>12+</i></span>
+                        <span><i>10+</i></span>
                         <span>1h 55min</span>
                         <span>Action</span>
                     </h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum deleniti corrupti rerum
-                        hic! Corrupti culpa sunt voluptates neque, minima porro velit maiores necessitatibus deserunt
-                        doloremque. Animi veniam voluptatem accusantium quod?
+                        As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a missão de
+                        verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da
+                        espécie.
                     </p>
                     <div class="buttons">
                         <a class="play_button" href="#"><img class="img_play_button"
                                 src="./assets/images/botao-play.png" area-hidden="true"> Play</a>
-                        <a class="pause_button" href="#"><img class="img_pause_button" src="./assets/icon/search.png"
-                                area-hidden="true"> My List</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div>
+            <h1 class="title">Recomendados</h1>
             <!-- NEXT SECTIONS -->
             <div class="body_cards">
                 <div class="card">
@@ -248,7 +243,7 @@
         <div class="content_card">
             <div class="content_text">
                 <div class="primary_content">
-                    <h2>Blade Runner</h2>
+                    <h2>Alien </h2>
                     <p>
                         Um filme que mudou a minha vida, de formas inimagináveis
                     </p>
@@ -382,11 +377,12 @@
     </div>
 
     <!-- Card API -->
-    <div class="title">Filems Mais Assistidos</div>
+    <div class="title">Filmes Mais Assistidos</div>
+    <!-- aquiiii -->
 
-    <div class="content_cards_api">
+    <div class="content_cards_api" id="cards_ranking">
 
-        <div id="ranking" class="content_card_api">
+        <!--  <div id="ranking" class="content_card_api">
             <div class="content_text_api">
                 <div class="primary_content_api">
                     <h2>Blade Runner</h2>
@@ -398,7 +394,8 @@
             <a href="#"><img src="./assets/images/botao-play.png"></a>
             <img src="./assets/poster_films/Blade Runner/463146.jpg" alt="">
         </div>
-
+ -->
+        <!-- até aqui -->
     </div>
 
 
@@ -420,25 +417,25 @@
                     <!-- Alien -->
                     <a onclick="selection1_option1()" class="quiz_cards">
                         <h3 class="tittle_card">Filmes Revolucionários</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/spaceship (3).png" alt="">
                     </a>
 
                     <!-- Curtindo a vida adoidado -->
                     <a onclick="selection1_option2()" class="quiz_cards">
                         <h3 class="tittle_card">Pequenas produções</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/zombie (3).png" alt="">
                     </a>
 
                     <!-- O show de Truman  -->
                     <a onclick="selection1_option3()" class="quiz_cards">
                         <h3 class="tittle_card">Filmes Questionadores</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/incognito (2).png" alt="">
                     </a>
 
                     <!-- O Senhor dos Anéis: A Sociedade do Anel  -->
                     <a onclick="selection1_option4()" class="quiz_cards">
                         <h3 class="tittle_card">Maiores produções do Cinema</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/sauron (3).png" alt="">
                     </a>
 
                     <!-- Blade Runner 2049 -->
@@ -457,7 +454,7 @@
                     <!-- Alien -->
                     <a onclick="selection2_option1()" class="quiz_cards">
                         <h3 class="tittle_card">Terror</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/ghost (2).png" alt="">
                     </a>
 
                     <!-- Curtindo a Vida Adoidado -->
@@ -469,19 +466,19 @@
                     <!-- O show de Truman -->
                     <a onclick="selection2_option3()" class="quiz_cards">
                         <h3 class="tittle_card">Drama</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/shakespeare (3).png" alt="">
                     </a>
 
                     <!-- O Senhor dos Anéis: A Sociedade do Anel -->
                     <a onclick="selection2_option4()" class="quiz_cards">
                         <h3 class="tittle_card">Aventura e Fantasia</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/dragon (3).png" alt="">
                     </a>
 
                     <!-- Blade Runner 2049 -->
                     <a onclick="selection2_option5()" class="quiz_cards">
                         <h3 class="tittle_card">Ficção Cientifica</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/star (2).png" alt="">
                     </a>
                 </div>
             </div>
@@ -494,31 +491,31 @@
                     <!-- Alien -->
                     <a onclick="selection3_option1()" class="quiz_cards">
                         <h3 class="tittle_card">Tensão e Suspense</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/lighthouse (3).png" alt="">
                     </a>
 
                     <!-- Curtindo a Vida Adoidado  -->
                     <a onclick="selection3_option2()" class="quiz_cards">
                         <h3 class="tittle_card">Pequenos Momentos</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/magic (2).png" alt="">
                     </a>
 
                     <!-- O show de Truman -->
                     <a onclick="selection3_option3()" class="quiz_cards">
                         <h3 class="tittle_card">Filmes com Plot twist</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/darth-vader (3).png" alt="">
                     </a>
 
                     <!-- O Senhor dos Anéis: A Sociedade do Anel -->
                     <a onclick="selection3_option4()" class="quiz_cards">
                         <h3 class="tittle_card">Uma boa trilha sonora</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/adventure-game (2).png" alt="">
                     </a>
 
                     <!-- Blade Runner 2049 -->
                     <a onclick="selection3_option5()" class="quiz_cards">
                         <h3 class="tittle_card">Um roteiro impecável</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/action (3).png" alt="">
                     </a>
                 </div>
             </div>
@@ -531,31 +528,31 @@
                     <!-- Alien -->
                     <a onclick="selection4_option1()" class="quiz_cards">
                         <h3 class="tittle_card">Anos 70</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/incognito (2).png" alt="">
                     </a>
 
                     <!-- Curtindo a Vida Adoidado -->
                     <a onclick="selection4_option2()" class="quiz_cards">
                         <h3 class="tittle_card">Anos 80</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/back-to-the-future (1).png" alt="">
                     </a>
 
                     <!-- O show de Truman -->
                     <a onclick="selection4_option3()" class="quiz_cards">
                         <h3 class="tittle_card">Anos 90</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/tardis (2).png" alt="">
                     </a>
 
                     <!-- O Senhor dos Anéis: A Sociedade do Anel -->
                     <a onclick="selection4_option4()" class="quiz_cards">
                         <h3 class="tittle_card">Anos 00</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/action (3).png" alt="">
                     </a>
 
                     <!-- Blade Runner 2049 -->
                     <a onclick="selection4_option5()" class="quiz_cards">
                         <h3 class="tittle_card">Anos 10</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/superhero (2).png" alt="">
                     </a>
                 </div>
             </div>
@@ -568,7 +565,7 @@
                     <!-- Alien -->
                     <a onclick="selection5_option1()" class="quiz_cards">
                         <h3 class="tittle_card">Descobrir novos mundos</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/spaceship (3).png" alt="">
                     </a>
 
                     <!-- Curtindo a Vida Adoidado -->
@@ -580,19 +577,19 @@
                     <!-- O show de Truman -->
                     <a onclick="selection5_option3()" class="quiz_cards">
                         <h3 class="tittle_card">Uma sociedade que pode ser uma farsa</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/incognito (2).png" alt="">
                     </a>
 
                     <!-- O Senhor dos Anéis: A Sociedade do Anel -->
                     <a onclick="selection5_option4()" class="quiz_cards">
                         <h3 class="tittle_card">Uma aventura e um mundo fantástico</h3>
-                        <img src="./assets/icons_for_quiz/thor (2).png" alt="">
+                        <img src="./assets/icons_for_quiz/magic (2).png" alt="">
                     </a>
 
                     <!-- Blade Runner 2049 -->
                     <a onclick="selection5_option5()" class="quiz_cards">
                         <h3 class="tittle_card">Descobrir um mundo distópico</h3>
-                        <img src="./assets/claquete_animado.gif" alt="">
+                        <img src="./assets/icons_for_quiz/zombie (3).png" alt="">
                     </a>
                 </div>
             </div>
@@ -607,19 +604,15 @@
                     <h3 class="tittle_film">Aproveite cada momento.</h3>
                 </div>
                 <div class="about_film">
-                    <img src="./assets/images/Blade-Runner-2049.jpg" alt="">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMmQ2MmU3NzktZjAxOC00ZDZhLTk4YzEtMDMyMzcxY2IwMDAyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
+                        alt="">
                     <div class="content_side">
                         <h3>Alien, o Oitavo Passageiro</h3>
                         <span>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
-                            consectetur
-                            adipisicing
-                            elit. Repellendus minus cumque vel, culpa incidunt itaque ut, provident quam enim doloremque
-                            placeat
-                            similique
-                            dolore.
+                            Uma nave espacial, ao retornar para Terra, recebe estranhos sinais vindos de um asteroide.
+                            Enquanto a equipe investiga o local, um dos tripulantes é atacado por um misterioso ser.
                         </span>
-                        <button class="button_quiz">Assistir</button>
+                        <a href="./alien.html"><button class="button_quiz">Assistir</button></a>
                     </div>
                 </div>
             </div>
@@ -631,9 +624,9 @@
                     <h3 class="tittle_film">Aproveite cada momento.</h3>
                 </div>
                 <div class="about_film">
-                    <img src="./assets/images/Blade-Runner-2049.jpg" alt="">
+                    <img src="https://br.web.img3.acsta.net/medias/nmedia/18/90/95/85/20122112.jpg" alt="">
                     <div class="content_side">
-                        <h3>Curtindo a Vida Adoidado </h3>
+                        <h3>Curtindo a Vida Adoidado</h3>
                         <span>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
                             consectetur
@@ -643,7 +636,7 @@
                             similique
                             dolore.
                         </span>
-                        <button class="button_quiz">Assistir</button>
+                        <a href="./curtindo_a_vida_adoidado.html"><button class="button_quiz">Assistir</button></a>
                     </div>
                 </div>
             </div>
@@ -655,19 +648,16 @@
                     <h3 class="tittle_film">Aproveite cada momento.</h3>
                 </div>
                 <div class="about_film">
-                    <img src="./assets/images/Blade-Runner-2049.jpg" alt="">
+                    <img src="https://br.web.img3.acsta.net/medias/nmedia/18/93/64/37/20269376.jpg" alt="">
                     <div class="content_side">
-                        <h3>O show de Truman </h3>
+                        <h3>O show de Truman</h3>
                         <span>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
-                            consectetur
-                            adipisicing
-                            elit. Repellendus minus cumque vel, culpa incidunt itaque ut, provident quam enim doloremque
-                            placeat
-                            similique
-                            dolore.
+                            Truman Burbank é um pacato vendedor de seguros que leva uma vida simples com sua esposa
+                            Meryl Burbank. Porém algumas coisas ao seu redor fazem com que ele passe a estranhar sua
+                            cidade, seus supostos amigos e até sua mulher.
                         </span>
-                        <button class="button_quiz">Assistir</button>
+                        <a href="./o_show_de_truman.html"><button class="button_quiz">Assistir</button></a>
+
                     </div>
                 </div>
             </div>
@@ -679,19 +669,15 @@
                     <h3 class="tittle_film">Aproveite cada momento.</h3>
                 </div>
                 <div class="about_film">
-                    <img src="./assets/images/Blade-Runner-2049.jpg" alt="">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/3/38/Lord_of_the_Rings_Fellowship_of_the_Ring.jpg"
+                        alt="">
                     <div class="content_side">
                         <h3>O Senhor dos Anéis: A Sociedade do Anel </h3>
                         <span>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
-                            consectetur
-                            adipisicing
-                            elit. Repellendus minus cumque vel, culpa incidunt itaque ut, provident quam enim doloremque
-                            placeat
-                            similique
-                            dolore.
+                            Em uma terra fantástica e única, um hobbit recebe de presente de seu tio um anel mágico e
+                            maligno que precisa ser destruído antes que caia nas mãos do mal.
                         </span>
-                        <button class="button_quiz">Assistir</button>
+                        <a href="./o_senhor_dos_aneis.html"><button class="button_quiz">Assistir</button></a>
                     </div>
                 </div>
             </div>
@@ -703,7 +689,7 @@
                     <h3 class="tittle_film">Aproveite cada momento.</h3>
                 </div>
                 <div class="about_film">
-                    <img src="./assets/images/Blade-Runner-2049.jpg" alt="">
+                    <img src="https://br.web.img3.acsta.net/pictures/17/08/25/11/58/463146.jpg" alt="">
                     <div class="content_side">
                         <h3>Blade Runner 2049</h3>
                         <span>
@@ -715,7 +701,7 @@
                             similique
                             dolore.
                         </span>
-                        <button class="button_quiz">Assistir</button>
+                        <a href="./blade_runner.html"><button class="button_quiz">Assistir</button></a>
                     </div>
                 </div>
             </div>
@@ -727,19 +713,15 @@
                     <h3 class="tittle_film">Aproveite cada momento.</h3>
                 </div>
                 <div class="about_film">
-                    <img src="./assets/images/Blade-Runner-2049.jpg" alt="">
+                    <img src="https://br.web.img3.acsta.net/pictures/20/10/09/10/12/0923276.jpg" alt="">
                     <div class="content_side">
                         <h3>Soul</h3>
                         <span>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
-                            consectetur
-                            adipisicing
-                            elit. Repellendus minus cumque vel, culpa incidunt itaque ut, provident quam enim doloremque
-                            placeat
-                            similique
-                            dolore.
+                            Joe é um professor de música do ensino médio apaixonado por jazz, cuja vida não foi como ele
+                            esperava. Quando ele viaja a uma outra realidade para ajudar outra pessoa a encontrar sua
+                            paixão, ele descobre o verdadeiro sentido da vida.
                         </span>
-                        <button class="button_quiz">Assistir</button>
+                        <a href="./soul.html"><button class="button_quiz">Assistir</button></a>
                     </div>
                 </div>
             </div>
@@ -802,3 +784,49 @@
 </body>
 
 </html>
+
+<script>
+
+    fetch(`/like/`, {
+        method: "GET",
+    }).then((resposta) => {
+        resposta.json().then((json) => {
+            console.log(json)
+            var obj = (json)
+
+            for (var i = 0; i < obj.length; i++) {
+                cards_ranking.innerHTML += `
+                
+                <div id="ranking" class="content_card_api">
+            <div class="content_text_api">
+                <div class="primary_content_api">
+                    <h2>${obj[i].filme}</h2>
+                    <p>
+                        Um filme que mudou a minha vida, de formas inimagináveis
+                    </p>    
+                </div>
+            </div>
+            <a href="#"><img src="./assets/images/botao-play.png"></a>
+            <img src="${obj[i].poster}" alt="">
+        </div>
+                
+
+                
+                `
+            }
+        }).catch((erro) => {
+            console.log(erro)
+        })
+    }).catch((err) => {
+        console.log(err);
+    })
+
+    function limparSessao() {
+        // aguardar();
+        sessionStorage.clear();
+        // finalizarAguardar();
+        window.location = "../login.html";
+    }
+
+
+</script>

@@ -19,3 +19,41 @@ function toggleVideo(){
   video.currentTime = 0;
   video.pause();
 }
+
+var idUsuario = sessionStorage.ID_USUARIO;
+
+function like(idFilme){
+
+  fetch(`/like/cadastrar/likeFilme/${idUsuario}`, {
+    method:"POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      idFilme: idFilme,
+    })
+
+
+  }).then(function (resposta){
+
+        resposta.json().then((json)=>{
+
+          console.log(json);
+
+        }).catch((err)=>{
+
+          console.log(err);
+
+        })
+
+  }).catch(function(erro){
+
+    console.log(erro);
+
+  })
+  
+}
+
+
+
+
